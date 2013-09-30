@@ -1,0 +1,16 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title "VNN Demo" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">Top {{numberOfPlayers}} Players</h1>
+    <ul id="demo-list">
+        <li><a href=' {{player[1]['url'] }} '> {{player[1]['name']}} </a></li>
+        <li><a href=' {{player[2]['url'] }} '> {{player[2]['name']}} </a></li>
+        <li><a href=' {{player[3]['url'] }} '> {{player[3]['name']}} </a></li>
+        <li><a href=' {{player[4]['url'] }} '> {{player[4]['name']}} </a></li>
+        <li><a href=' {{player[5]['url'] }} '> {{player[5]['name']}} </a></li>
+        </ul>
+{% endblock %}

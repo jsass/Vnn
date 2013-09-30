@@ -1,0 +1,35 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title "Symfony - Demos" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">{{name}}</h1>
+    <h1 class="subtitle">{{team}}</h1>
+    <table border="0">
+    <tr class="row1">
+ 	    <th></th><td>Opponent</th><th>Player, Score</th><th>Team, Score</th><th>W,/L</th>
+ 	 </tr>
+ 	   
+ 	   {% for game in gameData %}
+           <tr>
+            <td class="column1"> Game,{{ loop.index}}</td>
+            <td> {{game['opponent'] }} </td>
+            <td> {{game['playerScore']}} </td>
+            <td> {{game['teamScore']}} </td>
+            <td> {{game['winLose']}}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    
+
+    {% block myJavascript %}
+        <script type="text/javascript">
+            {{chart}}
+       </script>
+    {% endblock %}  
+
+{% endblock %}
+ 

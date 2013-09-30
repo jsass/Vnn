@@ -1,0 +1,13 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title "VNN Demo" %}
+
+{% block content_header '' %}
+
+{% block content %}
+    <h1 class="title">Test Page</h1>
+    <ul id="demo-list">
+        <li><a href="{{ path('_vnn_hello', {'name': 'World'}) }}">Hello World</a></li>
+        <li><a href="{{ path('_vnn_scorer') }}">Scorers</a></li>
+    </ul
+{% endblock %}
